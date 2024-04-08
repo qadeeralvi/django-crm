@@ -1,0 +1,18 @@
+{% extends "base.html" %} 
+{% block content %}
+    <h1> Login<h1/>
+        <br>
+    <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %} 
+        <div class="mb-3">
+           
+            <input type="TEXT" class="form-control" name="username" placeholder="User Name" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+           
+            <input type="password" name="password" placeholder="Password" class="form-control" >
+        </div>
+       
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+{% endblock  %}
